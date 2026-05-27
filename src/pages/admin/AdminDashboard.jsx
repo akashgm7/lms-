@@ -77,7 +77,7 @@ const AdminDashboard = () => {
                 </div>
               ))}
             </div>
-            <button className="view-all-btn mt-4" onClick={() => navigate('/admin/action')}>View All Activity</button>
+            <button className="view-all-btn mt-4" onClick={() => navigate('/admin/action', { state: { title: 'Activity Logs', description: 'View and manage system activities.' } })}>View All Activity</button>
           </CardContent>
         </Card>
       </div>

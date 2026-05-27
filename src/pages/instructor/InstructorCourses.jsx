@@ -20,7 +20,7 @@ const InstructorCourses = () => {
           <h1>My Courses</h1>
           <p className="text-muted">Manage your course content and materials.</p>
         </div>
-        <button className="btn-primary" style={{ padding: '0.5rem 1rem', borderRadius: '0.5rem', display: 'flex', gap: '0.5rem', alignItems: 'center' }} onClick={() => navigate('/instructor/action')}>
+        <button className="btn-primary" style={{ padding: '0.5rem 1rem', borderRadius: '0.5rem', display: 'flex', gap: '0.5rem', alignItems: 'center' }} onClick={() => navigate('/instructor/action', { state: { title: 'Manage Course', description: 'Update your course content and structure.' } })}>
           <Plus size={18} /> Create New Course
         </button>
       </div>
@@ -56,10 +56,10 @@ const InstructorCourses = () => {
               )}
 
               <div style={{ display: 'flex', gap: '0.5rem' }}>
-                <button className="btn-primary" style={{ flex: 1, padding: '0.5rem', borderRadius: '0.375rem', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem' }} onClick={() => navigate('/instructor/action')}>
+                <button className="btn-primary" style={{ flex: 1, padding: '0.5rem', borderRadius: '0.375rem', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem' }} onClick={() => navigate('/instructor/action', { state: { title: 'Manage Course', description: 'Update your course content and structure.' } })}>
                   <Play size={16} /> Edit Content
                 </button>
-                <button className="icon-btn" style={{ border: '1px solid var(--border-color)', borderRadius: '0.375rem' }} onClick={() => navigate('/instructor/action')}>
+                <button className="icon-btn" style={{ border: '1px solid var(--border-color)', borderRadius: '0.375rem' }} onClick={() => navigate('/instructor/action', { state: { title: 'Manage Course', description: 'Update your course content and structure.' } })}>
                   <MoreVertical size={16} />
                 </button>
               </div>

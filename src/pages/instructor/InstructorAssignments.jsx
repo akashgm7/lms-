@@ -34,7 +34,7 @@ const InstructorAssignments = () => {
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
-          <button className="icon-btn" style={{ border: '1px solid var(--border-color)' }} onClick={() => navigate('/instructor/action')}>
+          <button className="icon-btn" style={{ border: '1px solid var(--border-color)' }} onClick={() => navigate('/instructor/action', { state: { title: 'Manage Assignment', description: 'Configure assignment details and grading criteria.' } })}>
             <Filter size={18} />
           </button>
         </div>
@@ -67,7 +67,7 @@ const InstructorAssignments = () => {
                       <Check size={14} /> Grade
                     </button>
                   ) : (
-                    <button className="icon-btn" style={{ display: 'inline-flex', width: '32px', height: '32px' }} onClick={() => navigate('/instructor/action')}>
+                    <button className="icon-btn" style={{ display: 'inline-flex', width: '32px', height: '32px' }} onClick={() => navigate('/instructor/action', { state: { title: 'Manage Assignment', description: 'Configure assignment details and grading criteria.' } })}>
                       <FileText size={16} />
                     </button>
                   )}

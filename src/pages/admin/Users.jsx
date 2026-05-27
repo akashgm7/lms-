@@ -24,7 +24,7 @@ const Users = () => {
           <h1>User Management</h1>
           <p className="text-muted">Manage instructors, students, and system admins.</p>
         </div>
-        <button className="btn-primary" style={{ padding: '0.5rem 1rem', borderRadius: '0.5rem', backgroundColor: 'var(--color-primary)', color: 'white', display: 'flex', gap: '0.5rem', alignItems: 'center' }} onClick={() => navigate('/admin/action')}>
+        <button className="btn-primary" style={{ padding: '0.5rem 1rem', borderRadius: '0.5rem', backgroundColor: 'var(--color-primary)', color: 'white', display: 'flex', gap: '0.5rem', alignItems: 'center' }} onClick={() => navigate('/admin/action', { state: { title: 'Manage User', description: 'Update user profile, roles, and permissions.' } })}>
           <Plus size={18} /> Add User
         </button>
       </div>
@@ -40,7 +40,7 @@ const Users = () => {
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
-          <button className="icon-btn" style={{ border: '1px solid var(--border-color)' }} onClick={() => navigate('/admin/action')}>
+          <button className="icon-btn" style={{ border: '1px solid var(--border-color)' }} onClick={() => navigate('/admin/action', { state: { title: 'Manage User', description: 'Update user profile, roles, and permissions.' } })}>
             <Filter size={18} />
           </button>
         </div>
@@ -82,7 +82,7 @@ const Users = () => {
                 </TableCell>
                 <TableCell style={{ textAlign: 'right' }}>
                   <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '0.5rem' }}>
-                    <button className="icon-btn" style={{ width: '32px', height: '32px' }} onClick={() => navigate('/admin/action')}><Edit size={16} /></button>
+                    <button className="icon-btn" style={{ width: '32px', height: '32px' }} onClick={() => navigate('/admin/action', { state: { title: 'Manage User', description: 'Update user profile, roles, and permissions.' } })}><Edit size={16} /></button>
                     <button className="icon-btn" style={{ width: '32px', height: '32px', color: 'var(--color-danger)' }} onClick={() => navigate('/admin/delete')}><Trash2 size={16} /></button>
                   </div>
                 </TableCell>

@@ -24,7 +24,7 @@ const Exams = () => {
           <h1>Exams & Results</h1>
           <p className="text-muted">Review student submissions and manage certifications.</p>
         </div>
-        <button className="btn-primary" style={{ padding: '0.5rem 1rem', borderRadius: '0.5rem', backgroundColor: 'var(--color-primary)', color: 'white', display: 'flex', gap: '0.5rem', alignItems: 'center' }} onClick={() => navigate('/admin/action')}>
+        <button className="btn-primary" style={{ padding: '0.5rem 1rem', borderRadius: '0.5rem', backgroundColor: 'var(--color-primary)', color: 'white', display: 'flex', gap: '0.5rem', alignItems: 'center' }} onClick={() => navigate('/admin/action', { state: { title: 'Manage Exam', description: 'Configure exam settings and questions.' } })}>
           <Plus size={18} /> Create Exam
         </button>
       </div>
@@ -40,7 +40,7 @@ const Exams = () => {
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
-          <button className="icon-btn" style={{ border: '1px solid var(--border-color)' }} onClick={() => navigate('/admin/action')}>
+          <button className="icon-btn" style={{ border: '1px solid var(--border-color)' }} onClick={() => navigate('/admin/action', { state: { title: 'Manage Exam', description: 'Configure exam settings and questions.' } })}>
             <Filter size={18} />
           </button>
         </div>
@@ -86,7 +86,7 @@ const Exams = () => {
                         Grade
                       </button>
                     ) : (
-                      <button className="icon-btn" style={{ width: '32px', height: '32px' }} onClick={() => navigate('/admin/action')}>
+                      <button className="icon-btn" style={{ width: '32px', height: '32px' }} onClick={() => navigate('/admin/action', { state: { title: 'Manage Exam', description: 'Configure exam settings and questions.' } })}>
                         <FileText size={16} />
                       </button>
                     )}

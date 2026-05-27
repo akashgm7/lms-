@@ -57,8 +57,8 @@ const Settings = () => {
               <hr style={{ border: 'none', borderTop: '1px solid var(--border-color)', margin: '0.5rem 0' }} />
               
               <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '1rem' }}>
-                <button type="button" style={{ padding: '0.5rem 1rem', borderRadius: '0.5rem', fontWeight: '500', color: 'var(--text-main)' }} onClick={() => navigate('/admin/action')}>Cancel</button>
-                <button type="button" className="btn-primary" style={{ padding: '0.5rem 1rem', borderRadius: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }} onClick={() => navigate('/admin/action')}>
+                <button type="button" style={{ padding: '0.5rem 1rem', borderRadius: '0.5rem', fontWeight: '500', color: 'var(--text-main)' }} onClick={() => navigate('/admin/action', { state: { title: 'System Settings', description: 'Configure global platform preferences.' } })}>Cancel</button>
+                <button type="button" className="btn-primary" style={{ padding: '0.5rem 1rem', borderRadius: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }} onClick={() => navigate('/admin/action', { state: { title: 'System Settings', description: 'Configure global platform preferences.' } })}>
                   <Save size={16} /> Save Changes
                 </button>
               </div>

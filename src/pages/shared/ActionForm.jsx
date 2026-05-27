@@ -1,10 +1,13 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Save } from 'lucide-react';
 import { Card, CardContent } from '../../components/ui/Card';
 
-const ActionForm = ({ title = "Manage Item", description = "Fill out the details below.", backPath = -1 }) => {
+const ActionForm = ({ backPath = -1 }) => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const title = location.state?.title || "Manage Item";
+  const description = location.state?.description || "Fill out the details below.";
 
   return (
     <div className="dashboard-container">

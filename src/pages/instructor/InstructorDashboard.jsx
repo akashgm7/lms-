@@ -35,7 +35,7 @@ const InstructorDashboard = () => {
                     <p className="font-medium" style={{ margin: 0 }}>{course}</p>
                     <span className="activity-time">{120 + i * 40} Students Enrolled</span>
                   </div>
-                  <button className="view-all-btn" style={{ width: 'auto', padding: '0.25rem 0.75rem' }} onClick={() => navigate('/instructor/action')}>Manage</button>
+                  <button className="view-all-btn" style={{ width: 'auto', padding: '0.25rem 0.75rem' }} onClick={() => navigate('/instructor/action', { state: { title: 'Manage Item', description: 'Update item details.' } })}>Manage</button>
                 </div>
               ))}
             </div>
